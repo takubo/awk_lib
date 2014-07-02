@@ -47,7 +47,7 @@ function bc(expr,    cmd, tmp, anser) {
 function rep(str, num,     res) { while (num--) res = res str; return res }
 
 # sleep
-function sleep(sec,    dummy) { "sleep " sec | getline dummy }
+function sleep(sec,    dummy) { "sleep " sec | getline dummy ; close("sleep " sec) }
 
 # length of multi bytes character string
 #function wlength(str) { gsub(/./, "a", str); return blength(str) }
